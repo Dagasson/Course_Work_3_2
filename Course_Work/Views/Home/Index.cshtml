@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h2>Новые Услуги</h2>
+<div id="mainList"></div>
+<script type="text/babel">
+    class Field extends React.Component {
+    constructor(props) {
+    super(props);
+    }
+    render(){
+    const {service} = this.props;
+    return(
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="row">
+                    <a href={'service/'+service.id+'/view/'}>{service.name}</a>
+                </div>
+                <div class="row">
+                    {service.about}
+                </div>
+            </div>
+            <div class="col-sm-3">
+                {service.companyName}
+            </div>
+            <div class="col-sm-2">
+                {service.price} руб.
+            </div>
+        </div>
+    </li>
+    );
+
+    }
+    }
+
+
+    class App extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {list:null};
+    }
+    componentDidMount(){
+    fetch("/service/").then((res)=> {
+    return res.json()
+    }).then((res)=>{
+    this.arr = res;
+
+    this.setState((state, props)=>{
+    const list = this.arr.map((service)=>
+    <Field service={service} />)
+    return {list};
+    });
+    });
+    };
+    render() {
+    if(this.arr !== undefined)
+    {
+    return(
+    <ul class="list-group">
+        {this.state.list}
+    </ul> );
+    }
+    else {
+    return (
+    <h1>Load</h1>);
+    }
+    }
+    }
+    ReactDOM.render(
+    <App />, document.getElementById('mainList'));
+</script>
+

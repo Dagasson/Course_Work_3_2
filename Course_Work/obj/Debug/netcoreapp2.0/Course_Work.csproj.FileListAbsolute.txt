@@ -1,0 +1,11 @@
+E:\Study\3-2\Курсач\Course_Work\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.deps.json
+E:\Study\3-2\Курсач\Course_Work\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.runtimeconfig.json
+E:\Study\3-2\Курсач\Course_Work\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.runtimeconfig.dev.json
+E:\Study\3-2\Курсач\Course_Work\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.dll
+E:\Study\3-2\Курсач\Course_Work\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.pdb
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.csproj.CoreCompileInputs.cache
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.AssemblyInfoInputs.cache
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.AssemblyInfo.cs
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.dll
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.pdb
+E:\Study\3-2\Курсач\Course_Work\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.csprojResolveAssemblyReference.cache
