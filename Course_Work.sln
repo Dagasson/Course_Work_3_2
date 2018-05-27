@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course_Work", "Course_Work\Course_Work.csproj", "{AA905C9E-44FB-4BFA-9CFF-8E7ECD0BE20F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Course_Work", "Course_Work\Course_Work.csproj", "{AA905C9E-44FB-4BFA-9CFF-8E7ECD0BE20F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperCource.Test", "Course_Work.Test\SuperCource.Test.csproj", "{C43DDB8A-EC47-40F0-B24E-EEA4CAB0DEF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{AA905C9E-44FB-4BFA-9CFF-8E7ECD0BE20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA905C9E-44FB-4BFA-9CFF-8E7ECD0BE20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA905C9E-44FB-4BFA-9CFF-8E7ECD0BE20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C43DDB8A-EC47-40F0-B24E-EEA4CAB0DEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C43DDB8A-EC47-40F0-B24E-EEA4CAB0DEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C43DDB8A-EC47-40F0-B24E-EEA4CAB0DEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C43DDB8A-EC47-40F0-B24E-EEA4CAB0DEF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

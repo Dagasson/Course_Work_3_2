@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Course_Work.Context;
+using Course_Work.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Course_Work
 {
@@ -29,6 +31,10 @@ namespace Course_Work
             services.AddDbContext<dbcontext>(options =>
                 options.UseSqlServer(connection));
 
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<dbcontext>()
+                .AddDefaultTokenProviders();
+
             services.AddMvc();
         }
 
@@ -46,6 +52,8 @@ namespace Course_Work
             }
 
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

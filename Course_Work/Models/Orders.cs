@@ -11,10 +11,13 @@ namespace Course_Work.Models
         [Key]
         public Int32 Id { get; set; }
         
-        public Int32 UserId { get; set; }
+        public String UserId { get; set; }
         public User User { get; set; }
 
-        public Int32 Sum { get; set; }
+        public Int32 ShopId { get; set; }
+        public Shop Shop { get; set; }
+        
         public DateTime DateOfOrder { get; set; }
+        public string Adress { get; set; }
     }
 }

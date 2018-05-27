@@ -1,0 +1,30 @@
+﻿@model Course_Work.ViewModels.UserInfoViewModel
+
+@{
+    ViewData["Title"] = "UserInfo";
+}
+<h2>UserInfo</h2>
+<h3>UserId :  @Model.User.Id</h3>
+<h3>UserMail :  @Model.User.Email</h3>
+<h2>Заказы пользователя: </h2>
+
+<table>
+    <tr>
+        <td>Id товара</td>
+        <td>Дата заказа</td>
+        <td>Адрес доставки</td>
+        <td></td>
+    </tr>
+    @foreach (var prod in Model.fview)
+    {
+        <tr>
+            <td>@prod.Name</td>
+            <td>@prod.DateOfOrder</td>
+            <td>@prod.Adress</td>
+        </tr>
+    }
+
+</table>
+<br />
+<a asp-area="" asp-controller="Orders" asp-action="Index">Редактор заказов</a>
+<br />

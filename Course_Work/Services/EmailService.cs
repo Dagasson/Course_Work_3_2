@@ -14,7 +14,7 @@ namespace Course_Work.Services
 
             var emailMessage = new MimeMessage();
 
-            emailMessage.From.Add(new MailboxAddress("Администрация сайта", "Dagasson@yandex.ru"));
+            emailMessage.From.Add(new MailboxAddress("Администрация сайта", "Dagasson@yandex.by"));
             emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
@@ -24,7 +24,8 @@ namespace Course_Work.Services
 
             using (var client = new SmtpClient())
             {
-                await client.ConnectAsync("smtp.yandex.ru", 25, false);
+                client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+                await client.ConnectAsync("smtp.yandex.ru", 25, false);//25 или 587
                 await client.AuthenticateAsync("Dagasson@yandex.by", "Kola0707!");
                 await client.SendAsync(emailMessage);
 

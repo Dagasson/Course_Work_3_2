@@ -20,7 +20,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Course_Work</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Главная страница</a>
             </div>
             <div>
                 @if (!User.Identity.IsAuthenticated)
@@ -33,7 +33,14 @@
 else
 {
             <ul class="nav navbar-nav" style="position: absolute;top: 0; right:5%">
-                <li><a asp-area="" asp-controller="Room" asp-action="Index">@User.Identity.Name</a></li>
+                <li><a asp-area="" asp-controller="Shops" asp-action="Index">Редактор еды</a></li>
+                <li>
+                    <a onclick="document.forms['UserForm'].submit()">Профиль</a>
+                <form hidden="hidden" name="UserForm" asp-controller="Account" asp-action="UserInfo" method="post">
+                 <input type="text" name="username" value="@User.Identity.Name" />
+                 <input type="submit" value="UserInfo" />
+                </form>
+                </li>
                 <li><a asp-area="" asp-controller="Account" asp-action="LogOff">Выйти</a></li>
             </ul>
 }

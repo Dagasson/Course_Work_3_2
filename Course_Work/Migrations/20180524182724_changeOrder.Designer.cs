@@ -11,8 +11,8 @@ using System;
 namespace Course_Work.Migrations
 {
     [DbContext(typeof(dbcontext))]
-    [Migration("20180513161244_initial")]
-    partial class initial
+    [Migration("20180524182724_changeOrder")]
+    partial class changeOrder
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,37 +26,21 @@ namespace Course_Work.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Adress");
+
                     b.Property<DateTime>("DateOfOrder");
-
-                    b.Property<int>("Sum");
-
-                    b.Property<int>("UserId");
-
-                    b.Property<string>("UserId1");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId1");
-
-                    b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("Course_Work.Models.productOnOrder", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("OrdersId");
 
                     b.Property<int>("ShopId");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId");
 
-                    b.HasIndex("OrdersId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ShopId");
 
-                    b.ToTable("Products");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("Course_Work.Models.Shop", b =>
@@ -236,22 +220,14 @@ namespace Course_Work.Migrations
 
             modelBuilder.Entity("Course_Work.Models.Orders", b =>
                 {
-                    b.HasOne("Course_Work.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId1");
-                });
-
-            modelBuilder.Entity("Course_Work.Models.productOnOrder", b =>
-                {
-                    b.HasOne("Course_Work.Models.Orders", "Orders")
-                        .WithMany()
-                        .HasForeignKey("OrdersId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("Course_Work.Models.Shop", "Shop")
                         .WithMany()
                         .HasForeignKey("ShopId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Course_Work.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -175,8 +175,9 @@ namespace Course_Work.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Adress = table.Column<string>(nullable: true),
                     DateOfOrder = table.Column<DateTime>(nullable: false),
-                    Sum = table.Column<int>(nullable: false),
+                    ShopId = table.Column<int>(nullable: false),
                     UserId = table.Column<int>(nullable: false),
                     UserId1 = table.Column<string>(nullable: true)
                 },
@@ -184,37 +185,17 @@ namespace Course_Work.Migrations
                 {
                     table.PrimaryKey("PK_Order", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_Order_Shops_ShopId",
+                        column: x => x.ShopId,
+                        principalTable: "Shops",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Order_AspNetUsers_UserId1",
                         column: x => x.UserId1,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    OrdersId = table.Column<int>(nullable: false),
-                    ShopId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Order_OrdersId",
-                        column: x => x.OrdersId,
-                        principalTable: "Order",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Products_Shops_ShopId",
-                        column: x => x.ShopId,
-                        principalTable: "Shops",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -257,19 +238,14 @@ namespace Course_Work.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Order_ShopId",
+                table: "Order",
+                column: "ShopId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Order_UserId1",
                 table: "Order",
                 column: "UserId1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_OrdersId",
-                table: "Products",
-                column: "OrdersId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Products_ShopId",
-                table: "Products",
-                column: "ShopId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -290,13 +266,10 @@ namespace Course_Work.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Order");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
-                name: "Order");
 
             migrationBuilder.DropTable(
                 name: "Shops");

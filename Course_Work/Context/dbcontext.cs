@@ -11,8 +11,8 @@ namespace Course_Work.Context
     public class dbcontext : IdentityDbContext<User>
     {
         public DbSet<Orders> Order {get; set;}
-        public DbSet<productOnOrder> Products { get; set; }
         public DbSet<Shop> Shops { get; set; }
+        
 
         public dbcontext(DbContextOptions<dbcontext> options):base(options)
         {       
