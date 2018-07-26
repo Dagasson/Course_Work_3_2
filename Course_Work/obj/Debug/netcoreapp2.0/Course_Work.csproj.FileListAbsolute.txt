@@ -20,3 +20,14 @@ E:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netc
 E:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.dll
 E:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.pdb
 E:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.csprojResolveAssemblyReference.cache
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.deps.json
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.runtimeconfig.json
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.runtimeconfig.dev.json
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.dll
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\bin\Debug\netcoreapp2.0\Course_Work.pdb
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.csprojAssemblyReference.cache
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.csproj.CoreCompileInputs.cache
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.AssemblyInfoInputs.cache
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.AssemblyInfo.cs
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.dll
+G:\Study\3-2\Курсач\Course_Work\Course_Work_3_2\Course_Work\obj\Debug\netcoreapp2.0\Course_Work.pdb
